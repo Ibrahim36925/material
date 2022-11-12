@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    #messageList {
+         display: flex;
+         flex-direction: column-reverse;
+     }
+ </style>
+</head>
+<body>
+ <div id="currentUser"></div>
+<div id="friends"></div>
+<input type="button" value="signout" id="signout">
+
+<div class="chatBox">
+ <h1></h1>
+ <ul id="messageList"></ul>
+ <input type="text" id="messageValue">
+ <button onclick="sendMessages()">send</button>
+</div>
+  <script type="module" src="profile.js"></script>
+    <!-- <p>Hello</p>
+    <button id="go-back">Back</button> -->
+    <!-- <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+import { getAuth, 
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged,
+    sendSignInLinkToEmail
+ } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+ import { doc,
+   setDoc,
+   getDoc,
+   getFirestore,
+   getDocFromCache,
+   collection, 
+   getDocs,
+   query,
+    where
+ } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"; 
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAIp_4TsN3151Rc-prOvadOOpbN-Sa1bm8",
+    authDomain: "first-project-10f99.firebaseapp.com",
+    projectId: "first-project-10f99",
+    storageBucket: "first-project-10f99.appspot.com",
+    messagingSenderId: "561615664113",
+    appId: "1:561615664113:web:1bbc28b1ae420c983d4a50",
+    measurementId: "G-3K4G6L14VF"
+  };
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore();
+
+        let goBack = document.getElementById("go-back")
+goBack.addEventListener("click",function(){
+
+  signOut(auth).then(() => {
+window.location="index.html"
+  }) .catch((error) => {
+    console.log("error")
+  });
+}) 
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+   location.replace("index.html")
+  } else {
+   console.log("signout suceesful")
+  }
+});
+
+
+    </script> -->
+</body>
+</html>
